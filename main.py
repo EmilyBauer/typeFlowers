@@ -36,6 +36,4 @@ class Menu(pygame.sprite.Sprite):
         #XPos = screenX
         #YPos = screenY
         #self.rect.center = (XPos, YPos)
-        #print self.rect.centerx
-        #print "Y coordingate ", self.rect.centery
-        #print self.rect.center
+        #print s
