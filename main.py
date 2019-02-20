@@ -16,6 +16,7 @@ sprite():
 def MainMenu():
   idk = 200
 
+  #I need to plan this out actually
 
 
 if "__name__" == main:
