@@ -13,7 +13,8 @@ sprite():
   lol=300
 
 
-
+def MainMenu():
+  idk = 200
 
 
 
@@ -32,8 +33,4 @@ class Menu(pygame.sprite.Sprite):
     def update(self):
         self.rect.centerx = 0
         self.rect.centery = 440
-        #(screenX, screenY) = pygame.Surface(screen.get_size())
-        #XPos = screenX
-        #YPos = screenY
-        #self.rect.center = (XPos, YPos)
-        #print s
+
