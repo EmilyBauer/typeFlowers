@@ -156,14 +156,14 @@ def RunProg(highscore=1000):   #Receive scene choice, word goal (later), maybe e
         allSprites.draw(screen)
 
         pygame.display.flip()
-    return highscore
+    return donePlaying
 
 
 def main():
     highscore = 1000
     donePlaying = False
     while not donePlaying:
-        highscore = RunProg(highscore)
+        donePlaying = RunProg(highscore)
 
 
 def word_count(str):
