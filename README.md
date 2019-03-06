@@ -1,7 +1,7 @@
 # typeFlowers
 
 Hello!
-
+ t
 This is my program (very very incomplete) that will allow a person to track their writing progress.
 This is to help people who find the writing process difficult and need motivational assistance.
 
