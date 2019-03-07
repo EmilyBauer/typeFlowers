@@ -31,9 +31,9 @@ table.head {
 	border-spacing: 2;
 }
 canvas{
-	width:100%;
+	width:600px;
 	height:400px;
-	background-color: blue;
+	background-color: #356D32;
 }
 table {
 	border: 1px solid white;
@@ -51,10 +51,13 @@ th,td,th {
 }
 p{
 	text-indent:0px;
-	
 }
 
-
+#plantSprites {
+	width: 90%;
+	height: 8px;
+	background-color: #60A33D;
+  }
 
 #grad1 {
   height: 200px;
