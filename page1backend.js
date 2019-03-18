@@ -14,6 +14,45 @@ var totalSeconds = 0;
 setInterval(setTime, 1000);
 
 
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = " #227C2F"; //60A33D, 52A02C, 227C2F
+ctx.fillRect(0,95,300,100);
+ctx.fillStyle = " #5EA6D0"; //60A33D
+ctx.fillRect(0,0,300,95);
+//300 wide, 150 tall?
+ctx.fillStyle = "#BDEB0A";
+ctx.fillRect(10,100, 280, 5);
+ctx.fillRect(10,110, 280, 5);
+ctx.fillRect(10,120, 280, 5);
+ctx.fillRect(10,130, 280, 5);
+ctx.fillRect(10,140, 280, 5);
+
+
+var row1=[];
+var row2=[];
+var row3=[];
+var row4=[];
+var row5=[];
+var row6=[];
+var rows = [row1, row2, row3, row4, row5, row6];
+var flower1 = [50, 3, ["resources/flower1/flower.1_1.png","resources/flower1/flower.1_2.png","resources/flower1/flower.1_3.png","resources/flower1/flower.1_4.png","resources/flower1/flower.1_5.png"]];
+var flower2 = [50, 4, ["resources/flower1/flower.1_1.png","resources/flower1/flower.1_2.png","resources/flower1/flower.1_3.png","resources/flower1/flower.1_4.png","resources/flower1/flower.1_5.png"]];
+var flower3 = [50, 2, ["resources/flower1/flower.1_1.png","resources/flower1/flower.1_2.png","resources/flower1/flower.1_3.png","resources/flower1/flower.1_4.png","resources/flower1/flower.1_5.png"]];
+var flower4 = [50, 3, ["resources/flower3/flower.3_1.png","resources/flower3/flower.3_2.png","resources/flower3/flower.3_3.png","resources/flower3/flower.3_4.png","resources/flower3/flower.3_5.png"]];
+var flower5 = [50, 4, ["resources/flower3/flower.3_1.png","resources/flower3/flower.3_2.png","resources/flower3/flower.3_3.png","resources/flower3/flower.3_4.png","resources/flower3/flower.3_5.png"]];
+var flower6 = [50, 2, ["resources/flower3/flower.3_1.png","resources/flower3/flower.3_2.png","resources/flower3/flower.3_3.png","resources/flower3/flower.3_4.png","resources/flower3/flower.3_5.png"]];
+
+var flowerSelection = [flower1,flower2,flower3,flower4,flower5,flower6];
+var flowerNum = 0;
+
+
+
+
+
+
+
 $('#textarea1').on('keyup',function(){
 	count = $('#textarea1').val().trim().split(/\s/).length;
 	$('#writtenwords').text(count);
@@ -57,10 +96,13 @@ function checkSpeed() {
 		prevCount = count;
 		thenTime = iTime;
 
+		if (wordCurrency>flowerNum*5){		//It is currently within the if the word has changed. May not be necessary
+			wordCurrency-=flowerNum*5		//Another way of saying reset to 0
+			addFlowers();
+			init();
+		}
 	}
-
 	iLastTime = iTime;
-	
 }
 
 
@@ -81,34 +123,6 @@ function pad(val) {
 }
 
 
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.fillStyle = " #227C2F"; //60A33D, 52A02C, 227C2F
-ctx.fillRect(0,95,300,100);
-ctx.fillStyle = " #5EA6D0"; //60A33D
-ctx.fillRect(0,0,300,95);
-//300 wide, 150 tall?
-ctx.fillStyle = "#BDEB0A";
-ctx.fillRect(10,100, 280, 5);
-ctx.fillRect(10,110, 280, 5);
-ctx.fillRect(10,120, 280, 5);
-ctx.fillRect(10,130, 280, 5);
-ctx.fillRect(10,140, 280, 5);
-
-
-var row1=[];
-var row2=[];
-var row3=[];
-var row4=[];
-var row5=[];
-var row6=[];
-var rows = [row1, row2, row3, row4, row5, row6];
-var flower1 = [50, 3, ["resources/flower1/flower.1_1.png","resources/flower1/flower.1_2.png","resources/flower1/flower.1_3.png","resources/flower1/flower.1_4.png","resources/flower1/flower.1_5.png"]];
-var flower2 = [50, 4, ["resources/flower1/flower.1_1.png","resources/flower1/flower.1_2.png","resources/flower1/flower.1_3.png","resources/flower1/flower.1_4.png","resources/flower1/flower.1_5.png"]];
-var flower3 = [50, 2, ["resources/flower1/flower.1_1.png","resources/flower1/flower.1_2.png","resources/flower1/flower.1_3.png","resources/flower1/flower.1_4.png","resources/flower1/flower.1_5.png"]];
-var flower4 = [50, 4, ["resources/flower2/flower.2_1.png","resources/flower2/flower.2_2.png","resources/flower2/flower.2_3.png","resources/flower2/flower.2_4.png","resources/flower2/flower.2_5.png"]];
-
-var flowerSelection = [flower1, flower2,flower3];
 
 function init(){
 	for (i=0;i<rows.length;i++){
@@ -133,30 +147,51 @@ function drawImg(img, X, Y){
 	}
 }
 
-//(xpos,ypos) = mouse.getPos
-//init();
+//if type more than(5* flowerNum) generate new flower
+
+function updateFlowers(){
+	for (row in rows){
+		for (flowers in row){
+			
+		}
+	}
+}
 
 function getRandomInt(min, max) {
 	min = Math.ceil(min);
 	max = Math.floor(max);
 	return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-  }
+}
+
 function addFlowers(){
-	var em = getRandomInt(0, rows.length)
-	var i = rows[em];	//choose a row	
-	var len = getRandomInt(1, 28)*10;
-	var flow = getRandomInt(0, flowerSelection.length);
-	var y = em*10+100;
+	var em = getRandomInt(0, rows.length)//choose a row
+	var i = rows[em];		//assign row
+	var len = getRandomInt(1, 28)*10; 	// choose x-position
+	var flow = getRandomInt(0, flowerSelection.length);	//chose rand flower
+	var y = em*10+100;					// y-position
+	/*
+	//To check if a flower is grown in that position	TODO later
+	for (var item in i){
+		(xpos,ypos,fleur) = item;
+		while(xpos==len && ypos==y){
+
+		}
+	}
+*/
 	var tuple = [len, y, flowerSelection[flow]];
 	i.push(tuple);
+	flowerNum++;
 	//console.log(i);
 }
 
-for (p=0;p<30;p++){
-	addFlowers();
+function baseGenerate(){
+	for (p=0;p<90;p++){
+		addFlowers();
+	}
 }
 
-init();
+//baseGenerate();
+//init();
 
 //make_base();
 
