@@ -30,13 +30,13 @@ ctx.fillRect(10,130, 280, 5);
 ctx.fillRect(10,140, 280, 5);
 
 
-var row1=[];
-var row2=[];
-var row3=[];
-var row4=[];
-var row5=[];
-var row6=[];
-var rows = [row1, row2, row3, row4, row5, row6];
+const row1=[];
+const row2=[];
+const row3=[];
+const row4=[];
+const row5=[];
+const row6=[];
+const rows = [row1, row2, row3, row4, row5, row6];
 var flower1 = [50, 3, ["resources/flower1/flower.1_1.png","resources/flower1/flower.1_2.png","resources/flower1/flower.1_3.png","resources/flower1/flower.1_4.png","resources/flower1/flower.1_5.png"]];
 var flower2 = [50, 4, ["resources/flower1/flower.1_1.png","resources/flower1/flower.1_2.png","resources/flower1/flower.1_3.png","resources/flower1/flower.1_4.png","resources/flower1/flower.1_5.png"]];
 var flower3 = [50, 2, ["resources/flower1/flower.1_1.png","resources/flower1/flower.1_2.png","resources/flower1/flower.1_3.png","resources/flower1/flower.1_4.png","resources/flower1/flower.1_5.png"]];
