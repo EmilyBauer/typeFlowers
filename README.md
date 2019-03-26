@@ -16,3 +16,6 @@ More soon!
 i forgot to upload yesterday.
 
 sad
+
+:'(
+It will work out anyways
