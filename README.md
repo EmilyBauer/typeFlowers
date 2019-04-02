@@ -12,12 +12,4 @@ The main file being used is the HTML one, not main.py. I was having difficulties
 I also have Alishba making me sprites
 
 More soon!
- 
-i forgot to upload yesterday.
 
-sad
-
-:'(
-It will work out anyways
-
-just updating file well then kewl
