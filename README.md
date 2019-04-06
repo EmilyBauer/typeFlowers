@@ -14,4 +14,4 @@ I also have Alishba making me sprites
 More soon!
 
 Have not worked on the actual code for a while
-Life has been busy I am researching and looking
+Life has been busy I am researching and looking and typing
