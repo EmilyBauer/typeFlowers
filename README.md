@@ -13,5 +13,4 @@ I also have Alishba making me sprites
 
 More soon!
 
-Have not worked on the actual code for a while
-Life has been busy I am researching and looking and typing
+The solution requires using a database to store the textarea information. As I look into optimal solutions, I shall also be working in a different repository for Binochle
