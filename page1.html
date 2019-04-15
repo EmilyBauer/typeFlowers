@@ -15,6 +15,7 @@
 				<form class="col s12">
 				  <div class="row">
 					<div class="input-field col s12">
+							<input type="text" class="form-control" id="input-fileName" value="myStory" placeholder="Enter file name">
 					  <textarea id="textarea1" class="materialize-textarea">Once upon a time...</textarea>
 					</div>
 				  </div> 
@@ -23,7 +24,7 @@
 			<p id="word">Words: <span id= "writtenwords">0</span></p>	
 			<p id="timer">Timer: <label id="minutes">00</label>:<label id="seconds">00</label></p>
 			<p id="wpm">Avg Wpm:  <label id="avgWpm">0</label><br>Live Wpm: <label id="liveWpm">0</label></p>
-
+			<button id="btn-save" type="submit" class="btn btn-primary">Save file</button>
 			<button type="button" id="refreshButton" onclick="refresh()"> Refresh</button>
 		
 		</td>
