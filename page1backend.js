@@ -1,5 +1,6 @@
-
+import {saveAs} from "file-saver";
 $('#TheScreen').prepend('<img id="bgGarden" src="bgGarden.png" />')
+
 
 var iLastTime = 0;
 var iTime = 0;
@@ -102,6 +103,14 @@ $('#textarea1').on('keyup',function(){
 $(function() {
 	$("#textarea1").keyup(checkSpeed);
 });
+
+$("#btn-save").click( function() {
+	var text = $("#textarea").val();
+	var filename = $("#input-fileName").val()
+	var blob = new Blob([text], {type: "text/plain;charset=utf-8"});
+	saveAs(blob, filename+".txt");
+  });
+  
 
 function refresh(){
 	iLastTime = 0;
