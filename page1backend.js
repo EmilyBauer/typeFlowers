@@ -69,6 +69,7 @@ var maxW = 28;
 var xpos, ypos, fleur, gro;
 var first = true;
 
+//allows easy evaluation
 function baseInit(){
 	if (test){
 		multiple = 2;
