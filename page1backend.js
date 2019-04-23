@@ -32,7 +32,7 @@ function backdrop(){
 }
 backdrop();
 
-
+//the flowers
 const row1=[];
 const row2=[];
 const row3=[];
@@ -40,6 +40,7 @@ const row4=[];
 const row5=[];
 const row6=[];
 const rows = [row1, row2, row3, row4, row5, row6];
+// of the format [number of words to go to next stage in growth, [image names]]
 var flower3 =  [2,  ["resources/flower1/flower.1_1.png","resources/flower1/flower.1_2.png","resources/flower1/flower.1_3.png","resources/flower1/flower.1_4.png","resources/flower1/flower.1_5.png"]];
 var flower6 =  [2,  ["resources/flower3/flower.3_1.png","resources/flower3/flower.3_2.png","resources/flower3/flower.3_3.png","resources/flower3/flower.3_4.png","resources/flower3/flower.3_5.png"]];
 var flower7 =  [10, ["resources/flowerPile/flower.3_1.png","resources/flowerPile/flower.3_2.png"]];
