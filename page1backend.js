@@ -159,7 +159,7 @@ function checkSpeed() {
 }
 
 
-
+//timer, unrelated to wpm, should mix
 function setTime() {
 	++totalSeconds;
 	secondsLabel.innerHTML = pad(totalSeconds % 60);
