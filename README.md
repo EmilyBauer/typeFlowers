@@ -15,4 +15,4 @@ More soon!
 
 The solution requires using a database to store the textarea information. As I look into optimal solutions, I shall also be working in a different repository for Binochle
 
-im sick im sick 
+im sick im sick im sick
