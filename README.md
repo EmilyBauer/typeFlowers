@@ -9,8 +9,3 @@ Aside from actually writing it, future updates could include adding scenic optio
 
 The main file being used is the HTML one, not main.py. I was having difficulties creating a textbox area. HTML however has that textarea thing that I had tried before. I also just learned about using Javascript/jQuery with HTML, so now the project is moving somewhere. My mind is still having a hard time thinking through solutions.
 
-More soon!
-
-The solution requires using a database to store the textarea information. As I look into optimal solutions, I shall also be working in a different repository for Binochle
-
-:'(
