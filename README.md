@@ -9,4 +9,4 @@ Aside from actually writing it, future updates could include adding scenic optio
 
 The goal of this design is to document and evaluate the design of a website created to encourage writing in university and high-school level students. Originally I had wanted this to encourage my personal extra-curricular writing, of which I have a couple projects.
 
-
+lol guess what
